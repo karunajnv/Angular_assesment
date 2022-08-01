@@ -1,0 +1,25 @@
+<mat-dialog-content style="width: 100%;">
+    <h2 mat-dialog-title>Move Task </h2>
+    <br>
+
+    <mat-form-field style="margin-right:20px; margin-left: 10px;" class="config-form-field se-form select-se text-font"  appearance="outline">
+        <mat-select (selectionChange)="onListChange($event.value)" name="priority" placeholder="Select Task"
+            required>
+            <mat-option *ngFor="let list of toDoList" [value]="list" class="option-se text-font">{{
+                list }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field style="margin-right:20px; margin-left: 10px;" class="config-form-field se-form select-se text-font" appearance="outline">
+        <mat-select (selectionChange)="onActionSelect($event.value)" name="priority" placeholder="Select Status"
+            required>
+            <mat-option *ngFor="let action of actionList" [value]="action" class="option-se text-font">{{
+                action }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="actions" mat-raised-button (click)="submit()" >Submit</button>
+    <button class="actions" mat-raised-button style="margin-left: 20px;" (click)="close()">Close</button>
+</mat-dialog-actions>
