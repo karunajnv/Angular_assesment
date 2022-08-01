@@ -1,0 +1,23 @@
+#side-container {
+  height: 88vh;
+}
+
+.nav-item {
+  background-color: white;
+  cursor: pointer;
+  font-size: 12px !important;
+  height: 38px !important;
+}
+
+.menu-buttons-div:hover {
+  background-color: white !important;
+
+}
+
+.menu-buttons-div {
+  float: left;
+  width: 28%;
+  height: 60px;
+  position: absolute;
+  color: black;
+}

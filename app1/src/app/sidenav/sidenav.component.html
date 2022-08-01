@@ -1,0 +1,44 @@
+<ng-container>
+    <div>
+        <div id='side-container'>
+            <mat-toolbar>
+                <mat-toolbar-row style="background-color: white;">
+                    <img class="img-logo" style="color: black; height: 55px; margin-top:10px;cursor: pointer;"
+                        src='{{assetsPath}}/se-logo-green.png' alt=".studio">
+                </mat-toolbar-row>
+            </mat-toolbar>
+            <mat-accordion multi="true" #accordion="matAccordion">
+                <div *ngFor="let category of categories">
+                    <mat-nav-list>
+                        <a mat-list-item [routerLink]="getRouteFor(category)" class="nav-item"
+                            [routerLinkActive]="['list-item-active-se']">
+                            <mat-icon class="md-primary mat-icon bar-icon notranslate material-icons mat-icon-no-color "
+                                style="margin-right: 15px;">{{getIcon(category)}}</mat-icon>
+                            <span class="category-text">{{category}}</span>
+                        </a>
+                    </mat-nav-list>
+                </div>
+                <div>
+                    <mat-nav-list>
+                        <button mat-icon-button (click)="setting()" class="nav-item"
+                            style="margin-left: 15px !important; margin-top:150px !important;">
+                            <mat-icon class="md-primary mat-icon bar-icon notranslate material-icons mat-icon-no-color"
+                                style="margin: left 15px !important;">settings</mat-icon>
+                            <span style="margin-left: 15px;">Settings</span>
+                        </button>
+                    </mat-nav-list>
+                    <mat-nav-list>
+                        <button mat-icon-button (click)="logout()" class="nav-item"
+                            style="margin-left: 15px!important;">
+                            <mat-icon class="md-primary mat-icon bar-icon notranslate material-icons mat-icon-no-color"
+                                style="margin: left 15px !important;">logout</mat-icon>
+                            <span style="margin-left: 15px;">Log out</span>
+                        </button>
+                    </mat-nav-list>
+                </div>
+            </mat-accordion>
+        </div>
+    </div>
+
+
+</ng-container>
