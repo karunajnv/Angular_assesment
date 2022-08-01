@@ -1,0 +1,108 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+::ng-deep .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.icon-btn {
+  position: relative;
+  color: black;
+  float: right;
+  font-size: 14px;
+}
+
+.cover-image {
+  background-size: cover;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 40px;
+}
+
+.search-field {
+  width: 500px;
+  color: black;
+  background-color: white;
+  margin-left: 30px;
+  position: absolute;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card-div {
+  width: 100% !important;
+  margin-top: 20px;
+  display: flex;
+  margin-left: 15px;
+}
+
+.card-button {
+  width: 100%;
+  background-color: #72a47521;
+  margin-bottom: 10px !important;
+}
+
+.text-font {
+  font-size: 12px;
+  color: black;
+
+}
+
+.count-class {
+  float: inline-end;
+  margin-left: 240px;
+  margin-top: -15px;
+  color: #227361d6;
+}
+
+
+::ng-deep .se-form.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: white !important;
+}
+
+::ng-deep .mat-form-field-prefix .mat-form-field-prefix {
+  top: 0px !important;
+}
+
+::ng-deep .se-form.mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important;
+}
+
+
+::ng-deep .se-form.mat-form-field.mat-focused .mat-form-field-required-marker {
+  color: white !important;
+}
+
+::ng-deep .option-se.mat-option.mat-selected:not(.mat-option-disabled) {
+  color: white !important;
+}
+
+::ng-deep .select-se.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: white !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  display: flex !important;
+}
