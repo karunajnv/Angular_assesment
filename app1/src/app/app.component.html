@@ -1,0 +1,22 @@
+<div id="main-container" style="display: block;height: 100%;">
+    <mat-drawer-container class="main-container" style="height: 100%;">
+        <mat-drawer id="drawer" opened="true" style="display:block; width:270px; height: 100%; background-color:white;"
+            #sideDrawer mode="{{dockMode}}">
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content style="background-color: white;">
+            <ng-container>
+                <div id="drawer-area " style="height: 95vh; background-color: white; ">
+                    <app-dashboard></app-dashboard>
+                    <div id="drawer-area" style="height: 95vh;">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </ng-container>
+
+
+        </mat-drawer-content>
+
+    </mat-drawer-container>
+
+</div>
