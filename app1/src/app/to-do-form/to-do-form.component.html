@@ -1,0 +1,39 @@
+<mat-dialog-content style="width: 100%;" [formGroup]="toDoForm">
+    <h2 mat-dialog-title>Define Task </h2>
+    <br>
+    <mat-form-field class="config-form-field se-form text-font" appearance="outline">
+        <mat-label>Task Title</mat-label>
+        <input matInput type="text" formControlName="title" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="config-form-field se-form text-font" appearance="outline">
+        <mat-label>Task Description</mat-label>
+        <textarea matInput name="description" formControlName="description" placeholder="Enter description"
+            required></textarea>
+
+    </mat-form-field>
+    <br>
+    <mat-form-field style="margin-right:20px;" class="config-form-field se-form select-se text-font" appearance="outline">
+        <mat-select (selectionChange)="onPrioritySelect($event.value)" name="priority" placeholder="Select priority"
+            required>
+            <mat-option *ngFor="let priority of priorities" [value]="priority" class="option-se text-font">{{
+                priority }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <div style="display:flex; height:45px; margin-left: 5px">
+        <mat-label style="padding: 5px 0px 5px 10px; color: black; width: 50px; white-space: nowrap;" class="text-font">
+            Image Upload : </mat-label>
+        <button type="button" (click)="fileInput.click()" style="background-color: #3DCD58;
+                border: 1px solid white; color:white;margin-left: 50px; width: 70px; border-radius: 20px;">
+            <span>Browse</span>
+            <input #fileInput type="file" (change)="fileChangeEvent($event)" size="60"
+                (click)="$event.target.value=null" />
+        </button>
+        <span class="file-info">{{fileName}}</span>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="actions" mat-raised-button (click)="submit()" [disabled]="validateFields()">Submit</button>
+    <button class="actions" mat-raised-button style="margin-left: 20px;" (click)="close()">Close</button>
+</mat-dialog-actions>
